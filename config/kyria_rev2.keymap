@@ -53,13 +53,15 @@
             bindings = <&wm_layer_lgui>, <&kp>;
             retro-tap;
         };
-        ht_btclr: bt_clr_hold {
+        bspc_ht_mo: kp_mo_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "BT_CLR_HOLD_TAP";
+            label = "MOLAYER_HOLD_TAP";
             flavor = "hold-preferred";
-            tapping-term-ms = <1000>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
             #binding-cells = <2>;
-            bindings = <&bt>, <&none>;
+            bindings = <&mo>, <&kp>;
+            retro-tap;
         };
     };
 	keymap {
@@ -75,7 +77,7 @@
     &none &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P        &none
     &none &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI     &none
     &none &kp Z &kp X &kp C &kp V &kp B &none &none                       &none &none &kp N &kp M  &kp COMMA &kp DOT &kp FSLH    &none 
-	               	 &bootloader &kp LALT &td_ctrl &lt L_NUM BSPC &kp LSHFT        &ht_wmlgui 0 RET &lt L_RAISE SPACE  &kp ESC &none &none
+	               	 &bootloader &kp LALT &td_ctrl &bspc_ht_mo L_NUM BSPC &kp LSHFT        &ht_wmlgui 0 RET &lt L_RAISE SPACE  &kp ESC &none &none
 			>;
 	    };
 
@@ -99,7 +101,7 @@
 
 		raise_layer {
 			bindings = <
-   &none &kp LT  &kp GT  &kp LPAR  &kp RPAR  &kp DQT                                             &kp SQT &kp STAR  &kp COLON  &kp AT  &kp PRCNT      &none 
+   &none &kp LT  &kp GT  &kp LPAR  &kp RPAR  &kp DQT                                             &mt GRAVE SQT &mt TILDE STAR  &kp COLON  &kp AT  &kp PRCNT      &none 
    &none &kp TAB  &kp EXCL  &kp MINUS  &kp UNDER  &kp AMPS                                     &kp CARET  &kp LEFT  &kp DOWN &kp UP &kp RIGHT          &none
    &none &kp QMARK  &mt BSLH PIPE  &kp LBRC  &kp RBRC  &kp HASH  &trans &trans                &trans  &trans &kp PLUS  &kp EQUAL &kp LBKT &kp RBKT &kp DLLR      &none
 	                                   &trans &trans  &trans  &kp DEL  &trans         &trans   &trans   &trans &trans &trans
