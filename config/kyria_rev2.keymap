@@ -77,7 +77,7 @@
     &none &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P        &none
     &none &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI     &none
     &none &kp Z &kp X &kp C &kp V &kp B &none &none                       &none &none &kp N &kp M  &kp COMMA &kp DOT &kp FSLH    &none 
-	               	 &bootloader &kp LALT &td_ctrl &bspc_ht_mo L_NUM BSPC &kp LSHFT        &ht_wmlgui 0 RET &lt L_RAISE SPACE  &kp ESC &none &none
+	               	 &bootloader &kp LALT &td_ctrl &bspc_ht_mo L_NUM BSPC &kp LSHFT        &ht_wmlgui 0 RET &bspc_ht_mo L_RAISE SPACE  &kp ESC &none &none
 			>;
 	    };
 
