@@ -14,8 +14,10 @@ corne_right:
 	cd /zmk/app && \
 	west build -d build/corne_right -b seeeduino_xiao_ble -- -DZMK_CONFIG="/zmk-config/config" -DSHIELD=chippy_right && \
 	cp build/corne_right/zephyr/zmk.uf2 /out/corne_right.uf2
+	@echo "built /out/corne_right.uf2"
 
 corne_left:
 	cd /zmk/app && \
 	west build -d build/corne_left -b seeeduino_xiao_ble -- -DZMK_CONFIG="/zmk-config/config" -DSHIELD=chippy_left && \
 	cp build/corne_left/zephyr/zmk.uf2 /out/corne_left.uf2
+	@echo "built /out/corne_left.uf2"
